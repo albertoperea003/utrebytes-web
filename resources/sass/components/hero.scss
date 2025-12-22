@@ -1,0 +1,158 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use 'sass:color' as color;
+
+.hero {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(42, 42, 42, 0.7) 100%), 
+                url('/images/logo2.png') center/cover no-repeat;
+    background-attachment: fixed;
+    color: $white;
+    min-height: 100vh;
+    @include flex-column;
+    @include flex-center;
+    padding: $space-4xl $space-xl;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+    
+    @include breakpoint($breakpoint-md) {
+        min-height: 80vh;
+        padding: $space-3xl $space-lg;
+    }
+    
+    @include breakpoint($breakpoint-sm) {
+        min-height: 70vh;
+        padding: $space-2xl $space-md;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        animation: fadeInUp 1s ease-out;
+        
+        h1 {
+            font-size: $font-size-5xl;
+            margin-bottom: $space-xl;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            
+            @include breakpoint($breakpoint-md) {
+                font-size: $font-size-4xl;
+                margin-bottom: $space-lg;
+            }
+            
+            @include breakpoint($breakpoint-sm) {
+                font-size: $font-size-3xl;
+                margin-bottom: $space-md;
+            }
+        }
+        
+        p {
+            font-size: $font-size-lg;
+            margin-bottom: $space-2xl;
+            color: rgba($white, 0.95);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            
+            @include breakpoint($breakpoint-sm) {
+                font-size: $font-size-base;
+                margin-bottom: $space-xl;
+            }
+        }
+    }
+    
+    .hero-buttons {
+        @include flex-center;
+        gap: $space-lg;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+        
+        @include breakpoint($breakpoint-sm) {
+            gap: $space-md;
+        }
+        
+        .btn-primary-white {
+            @include btn-primary;
+            background-color: $white;
+            color: $primary-color;
+            
+            &:hover {
+                background-color: color.adjust($white, $lightness: -5%);
+                color: color.adjust($primary-color, $lightness: -10%);
+            }
+        }
+        
+        .btn-secondary-white {
+            @include btn-secondary;
+            background-color: transparent;
+            color: $white;
+            border-color: $white;
+            
+            &:hover {
+                background-color: $white;
+                color: $primary-color;
+            }
+        }
+    }
+    
+    .hero-stats {
+        position: relative;
+        z-index: 1;
+        margin-top: $space-4xl;
+        @include flex-center;
+        gap: $space-3xl;
+        
+        @include breakpoint($breakpoint-md) {
+            gap: $space-xl;
+            margin-top: $space-2xl;
+        }
+        
+        @include breakpoint($breakpoint-sm) {
+            flex-direction: column;
+            gap: $space-lg;
+        }
+        
+        .stat {
+            text-align: center;
+            
+            .stat-number {
+                font-size: $font-size-4xl;
+                font-weight: 800;
+                display: block;
+                
+                @include breakpoint($breakpoint-sm) {
+                    font-size: $font-size-3xl;
+                }
+            }
+            
+            .stat-label {
+                font-size: $font-size-sm;
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,86 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use 'sass:color' as color;
+
+nav {
+    background-color: #1a1a1a;
+    box-shadow: $shadow;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid $primary-color;
+    
+    .nav-container {
+        @include flex-between;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: $space-md $space-xl;
+        
+        @include breakpoint($breakpoint-md) {
+            padding: $space-md $space-lg;
+        }
+        
+        @include breakpoint($breakpoint-sm) {
+            padding: $space-md $space-md;
+        }
+    }
+    
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        
+        .logo-img {
+            height: 60px;
+            width: auto;
+            transition: transform $transition-normal;
+        }
+        
+        &:hover .logo-img {
+            transform: scale(1.05);
+        }
+    }
+    
+    .nav-links {
+        @include flex-center;
+        gap: $space-3xl;
+        list-style: none;
+        
+        @include breakpoint($breakpoint-md) {
+            gap: $space-xl;
+        }
+        
+        @include breakpoint($breakpoint-sm) {
+            display: none;
+        }
+        
+        a {
+            color: $text-light;
+            font-weight: 500;
+            position: relative;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $primary-color;
+                transition: width $transition-fast;
+            }
+            
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+    
+    .nav-button {
+        @include btn-primary;
+        
+        @include breakpoint($breakpoint-sm) {
+            padding: $space-sm $space-lg;
+            font-size: $font-size-base * 0.9;
+        }
+    }
+}

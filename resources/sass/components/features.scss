@@ -1,0 +1,66 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.features {
+    background-color: $white;
+    
+    .features-header {
+        text-align: center;
+        margin-bottom: $space-4xl;
+        
+        @include breakpoint($breakpoint-sm) {
+            margin-bottom: $space-2xl;
+        }
+        
+        h2 {
+            color: $text-dark;
+            margin-bottom: $space-lg;
+        }
+        
+        p {
+            font-size: $font-size-lg;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+    
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: $space-2xl;
+        
+        @include breakpoint($breakpoint-md) {
+            gap: $space-xl;
+        }
+        
+        @include breakpoint($breakpoint-sm) {
+            grid-template-columns: 1fr;
+            gap: $space-lg;
+        }
+    }
+    
+    .feature-card {
+        @include card;
+        border-left: 4px solid $primary-color;
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, $primary-color, $secondary-color);
+            border-radius: $radius-lg;
+            @include flex-center;
+            margin-bottom: $space-lg;
+            font-size: 1.5rem;
+        }
+        
+        h3 {
+            color: $text-dark;
+            margin-bottom: $space-md;
+        }
+        
+        p {
+            font-size: $font-size-base;
+            color: $text-light;
+        }
+    }
+}
