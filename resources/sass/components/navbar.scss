@@ -15,6 +15,7 @@ nav {
         max-width: 1280px;
         margin: 0 auto;
         padding: $space-md $space-xl;
+        position: relative;
         
         @include breakpoint($breakpoint-md) {
             padding: $space-md $space-lg;
@@ -22,6 +23,7 @@ nav {
         
         @include breakpoint($breakpoint-sm) {
             padding: $space-md $space-md;
+            flex-wrap: wrap;
         }
     }
     
@@ -45,18 +47,48 @@ nav {
         gap: $space-3xl;
         list-style: none;
         
-        @include breakpoint($breakpoint-md) {
+        @include breakpoint($breakpoint-lg) {
             gap: $space-xl;
         }
         
-        @include breakpoint($breakpoint-sm) {
-            display: none;
+        @include breakpoint($breakpoint-md) {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #1a1a1a;
+            border-bottom: 2px solid $primary-color;
+            padding: $space-xl;
+            gap: $space-md;
+            max-height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity $transition-normal, visibility $transition-normal, max-height $transition-normal;
+            
+            &.active {
+                max-height: 500px;
+                visibility: visible;
+                opacity: 1;
+            }
         }
         
         a {
             color: $text-light;
             font-weight: 500;
             position: relative;
+            display: flex;
+            align-items: center;
+            gap: $space-sm;
+            
+            svg {
+                width: 20px;
+                height: 20px;
+                transition: transform $transition-normal;
+            }
             
             &::after {
                 content: '';
@@ -69,18 +101,76 @@ nav {
                 transition: width $transition-fast;
             }
             
-            &:hover::after {
-                width: 100%;
+            &:hover {
+                svg {
+                    transform: scale(1.1);
+                }
+                
+                &::after {
+                    width: 100%;
+                }
             }
         }
     }
     
     .nav-button {
         @include btn-primary;
+        display: flex;
+        align-items: center;
+        gap: $space-sm;
         
-        @include breakpoint($breakpoint-sm) {
-            padding: $space-sm $space-lg;
-            font-size: $font-size-base * 0.9;
+        svg {
+            width: 20px;
+            height: 20px;
+            transition: transform $transition-normal;
+        }
+        
+        &:hover svg {
+            transform: scale(1.1);
+        }
+    }
+    
+    .nav-button-desktop {
+        @include breakpoint($breakpoint-md) {
+            display: none;
+        }
+    }
+    
+    .nav-button-mobile {
+        display: none;
+        
+        @include breakpoint($breakpoint-md) {
+            display: block;
+            width: 100%;
+            margin-top: $space-md;
+            
+            .nav-button {
+                width: 100%;
+            }
+        }
+    }
+    
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: $space-md;
+        color: $primary-color;
+        font-size: $font-size-2xl;
+        transition: transform $transition-normal, color $transition-normal;
+        
+        @include breakpoint($breakpoint-md) {
+            display: block;
+            order: 2;
+        }
+        
+        &:hover {
+            color: color.adjust($primary-color, $lightness: -10%);
+        }
+        
+        &.active {
+            transform: rotate(90deg);
         }
     }
 }

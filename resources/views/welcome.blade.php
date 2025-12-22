@@ -27,11 +27,45 @@
                 <a href="#" class="nav-logo">
                     <img src="{{ asset('images/logo2.png') }}" alt="UtreBytes Logo" class="logo-img">
                 </a>
-                <ul class="nav-links">
-                    <li><a href="#features">Características</a></li>
-                    <li><a href="#cta">Contacto</a></li>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#features">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Inicio
+                    </a></li>
+                    <li><a href="#features">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        Características
+                    </a></li>
+                    <li><a href="#cta">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Contacto
+                    </a></li>
+                    <li class="nav-button-mobile"><button class="nav-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Accede
+                    </button></li>
                 </ul>
-                <button class="nav-button">Registrarse</button>
+                <button class="nav-button nav-button-desktop">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Accede
+                </button>
             </div>
         </nav>
 
