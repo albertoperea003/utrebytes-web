@@ -9,7 +9,7 @@
     min-height: 100vh;
     @include flex-column;
     @include flex-center;
-    padding: $space-4xl $space-xl;
+    padding: 0 $space-xl $space-2xl $space-xl;
     text-align: center;
     position: relative;
     overflow: hidden;

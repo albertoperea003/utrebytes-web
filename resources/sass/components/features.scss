@@ -3,6 +3,12 @@
 
 .features {
     background-color: $white;
+    padding: $space-2xl $space-xl;
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     
     .features-header {
         text-align: center;
@@ -13,23 +19,26 @@
         }
         
         h2 {
-            color: $text-dark;
+            color: #1a1a1a;
             margin-bottom: $space-lg;
+            font-size: $font-size-4xl;
         }
         
         p {
             font-size: $font-size-lg;
             max-width: 600px;
             margin: 0 auto;
+            color: #666666;
         }
     }
     
     .features-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: $space-2xl;
         
         @include breakpoint($breakpoint-md) {
+            grid-template-columns: repeat(2, 1fr);
             gap: $space-xl;
         }
         
@@ -42,25 +51,36 @@
     .feature-card {
         @include card;
         border-left: 4px solid $primary-color;
+        padding: $space-2xl;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         
         .feature-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, $primary-color, $secondary-color);
             border-radius: $radius-lg;
             @include flex-center;
-            margin-bottom: $space-lg;
-            font-size: 1.5rem;
+            margin-bottom: $space-xl;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         h3 {
-            color: $text-dark;
+            color: #1a1a1a;
             margin-bottom: $space-md;
+            font-size: $font-size-xl;
         }
         
         p {
             font-size: $font-size-base;
-            color: $text-light;
+            color: #555555;
+            line-height: 1.6;
         }
     }
 }

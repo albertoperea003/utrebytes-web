@@ -4,21 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'UtreBytes') }} - Bienvenido</title>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
-
-    <!-- Styles -->
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
-        <style>
-            /* Fallback styles */
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { font-family: 'Instrument Sans', sans-serif; line-height: 1.6; }
-        </style>
-    @endif
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
     <body>
         <!-- Navigation -->
@@ -104,34 +93,52 @@
                 </div>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Rendimiento</h3>
-                        <p>Tecnología optimizada para velocidad máxima y eficiencia en todos tus procesos.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Desarrollo de Software a Medida</h3>
+                        <p>Aplicaciones web y móviles, módulos ERP personalizados, integración API con bancos,
+                        aseguradoras y plataformas logísticas. Desarrollo ágil y con pruebas automatizadas.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Seguridad</h3>
-                        <p>Protección avanzada con estándares internacionales de seguridad de datos.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Inteligencia Artificial y Modelos Generativos</h3>
+                        <p>Entrenamiento, fine-tuning y despliegue de modelos (GPT-5, Claude, Llama) adaptados a datos del
+                        cliente. Soluciones RAG privadas y sistemas multimodales (texto, imagen, voz).</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">📱</div>
-                        <h3>Responsivo</h3>
-                        <p>Diseño adaptable a cualquier dispositivo para mejor experiencia de usuario.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-toolbox"></i>
+                        </div>
+                        <h3>SI-GO! — Plataforma para reparaciones y aseguradoras</h3>
+                        <p>Gestión completa de siniestros: recepción, clasificación, asignación automática, generación de
+                        presupuestos, comunicación omnicanal con clientes y aseguradoras</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3>Preciso</h3>
-                        <p>Análisis detallado y reportes claros para tomar mejores decisiones.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>ERP Inteligente</h3>
+                        <p>ERP especializado en reparaciones y servicios con módulos de planificación, órdenes de trabajo,
+                        inventario, gestión de técnicos, facturación y reporting automático.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h3>Escalable</h3>
-                        <p>Crece sin límites. Nuestra infraestructura crece con tu negocio.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Automatización de Procesos y Agentes Autónomos</h3>
+                        <p>Robots de software y agentes que ejecutan tareas repetitivas (procesamiento de documentos,
+                        etiquetado, conciliaciones) para reducir la intervención humana.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon">💡</div>
-                        <h3>Innovación</h3>
-                        <p>Siempre a la vanguardia con las últimas tendencias tecnológicas.</p>
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3>Ciberseguridad y Cumplimiento</h3>
+                        <p>Auditorías, pentesting, monitorización continua, implementación de políticas ISO 27001 y protección
+                        de infraestructuras críticas.</p>
                     </div>
                 </div>
             </div>
