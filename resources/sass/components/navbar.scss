@@ -70,7 +70,7 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		color: $text-light;
-		padding-bottom: $space-xs;
+		
 		line-height: 1.2;
 		white-space: nowrap;
 		position: relative;
@@ -207,6 +207,17 @@
 		display: flex;
 		align-items: center;
 
+		// Crear una zona invisible que conecta el botón con el dropdown
+		&::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			height: $space-md;
+			pointer-events: auto;
+		}
+
 		&:hover .navbar__dropdown-menu {
 			opacity: 1;
 			visibility: visible;
@@ -228,7 +239,7 @@
 
 	&__dropdown-menu {
 		position: absolute;
-		top: calc(100% + $space-md);
+		top: calc(100% + $space-sm);
 		left: 0;
 		list-style: none;
 		margin: 0;
@@ -316,30 +327,18 @@
 		}
 
 		&__dropdown {
-			width: 100%;
-
+			
 			.navbar__link {
 				width: 100%;
 				padding: $space-sm 0;
 				justify-content: space-between;
+                i{
+                    display: none;
+                }
 			}
 
 			&:hover .navbar__dropdown-menu {
-				position: static;
-				opacity: 1;
-				visibility: visible;
-				transform: none;
-				pointer-events: auto;
-				background: transparent;
-				border: none;
-				backdrop-filter: none;
-				box-shadow: none;
-				margin-left: $space-lg;
-				margin-top: $space-sm;
-				min-width: auto;
-				padding: 0;
-				display: flex;
-				flex-direction: column;
+                display: none;
 			}
 		}
 
