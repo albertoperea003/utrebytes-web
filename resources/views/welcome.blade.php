@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Contacto - UtreBytes')
+@section('title', 'Inicio - UtreBytes')
 
 @section('content')
         <!-- Hero Section -->
         <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ asset('images/heros/hero_background.jpg') }}');">
             <div class="hero-content">
                 <h1>Bienvenido a UtreBytes</h1>
-                <p>Unidad tecnológica del GRUPO LRP 24 HOLDING S.L. 
+                <p>Unidad tecnológica GRUPO LRP 24 HOLDING S.L. 
                 <br> 
                 Tecnología de vanguardia al servicio de tus necesidades.   
                 </p>

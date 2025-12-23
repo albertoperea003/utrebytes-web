@@ -50,6 +50,30 @@
             grid-template-columns: 1fr;
             gap: $space-2xl;
         }
+
+        &--reverse {
+            grid-template-columns: 1fr 1fr;
+
+            @include breakpoint($breakpoint-md) {
+                grid-template-columns: 1fr;
+            }
+
+            > :first-child {
+                order: 2;
+
+                @include breakpoint($breakpoint-md) {
+                    order: 1;
+                }
+            }
+
+            > :last-child {
+                order: 1;
+
+                @include breakpoint($breakpoint-md) {
+                    order: 2;
+                }
+            }
+        }
     }
 
     .about-content {
@@ -73,12 +97,24 @@
     }
 
     .about-image {
+        overflow: hidden;
+        border-radius: $radius-xl;
+
         img {
             width: 100%;
             height: auto;
             border-radius: $radius-xl;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform $transition-normal;
         }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+
+    &--facilities {
+        background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
     }
 }
 

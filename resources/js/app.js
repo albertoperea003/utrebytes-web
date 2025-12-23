@@ -1,4 +1,6 @@
 import './bootstrap';
+import './cookies';
+import './chatbot';
 
 const DESKTOP_BREAKPOINT = 1024;
 

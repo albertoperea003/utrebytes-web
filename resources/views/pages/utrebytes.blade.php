@@ -21,12 +21,27 @@
                 <p>Contamos con un equipo multidisciplinario de profesionales expertos en desarrollo de software, inteligencia artificial, consultoría y transformación digital, listos para convertir tus desafíos en oportunidades de crecimiento.</p>
             </div>
             <div class="about-image">
-                <img src="{{ asset('images/heros/hero_background.jpg') }}" alt="Equipo UtreBytes">
+                <img src="{{ asset('images/about/about_1.jpg') }}" alt="Equipo UtreBytes">
             </div>
         </div>
     </div>
 </section>
-
+<!-- Facilities Section -->
+<section class="about-section about-section--facilities">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="{{ asset('images/about/about_2.png') }}" alt="Instalaciones UtreBytes">
+            </div>
+            <div class="about-content">
+                <h2>Nuestras Instalaciones</h2>
+                <p>Contamos con instalaciones modernas y completamente equipadas, diseñadas para fomentar la colaboración, la creatividad y la productividad de nuestro equipo.</p>
+                <p>Nuestras oficinas disponen de espacios abiertos para el trabajo colaborativo, salas de reuniones equipadas con tecnología de última generación, áreas de descanso y relajación, y una infraestructura de red de alta velocidad que garantiza el mejor rendimiento en todos nuestros proyectos.</p>
+                <p>Estamos comprometidos con la sostenibilidad y utilizamos energías renovables, sistemas de climatización eficientes y materiales ecológicos en nuestras instalaciones, reflejando nuestros valores corporativos en el día a día.</p>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Mission, Vision, Values Section -->
 <section class="about-mvv">
     <div class="container">
@@ -34,7 +49,7 @@
             <!-- Misión -->
             <div class="mvv-card">
                 <div class="mvv-image">
-                    <img src="{{ asset('images/heros/hero_background.jpg') }}" alt="Misión">
+                    <img src="{{ asset('images/about/mision.jpg') }}" alt="Misión">
                 </div>
                 <div class="mvv-content">
                     <h3>Misión</h3>
@@ -45,7 +60,7 @@
             <!-- Visión -->
             <div class="mvv-card">
                 <div class="mvv-image">
-                    <img src="{{ asset('images/heros/hero_background.jpg') }}" alt="Visión">
+                    <img src="{{ asset('images/about/vision.jpg') }}" alt="Visión">
                 </div>
                 <div class="mvv-content">
                     <h3>Visión</h3>
@@ -56,7 +71,7 @@
             <!-- Valores -->
             <div class="mvv-card">
                 <div class="mvv-image">
-                    <img src="{{ asset('images/heros/hero_background.jpg') }}" alt="Valores">
+                    <img src="{{ asset('images/about/valores.jpg') }}" alt="Valores">
                 </div>
                 <div class="mvv-content">
                     <h3>Valores</h3>
@@ -67,45 +82,6 @@
                         <li><strong>Sostenibilidad</strong></li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Choose Us Section -->
-<section class="about-why">
-    <div class="container">
-        <h2>¿Por qué elegirnos?</h2>
-        <div class="why-grid">
-            <div class="why-card">
-                <div class="why-number">01</div>
-                <h4>Expertise Multidisciplinario</h4>
-                <p>Equipo con experiencia en desarrollo, IA, consultoría y transformación digital</p>
-            </div>
-            <div class="why-card">
-                <div class="why-number">02</div>
-                <h4>Tecnología de Vanguardia</h4>
-                <p>Utilizamos las últimas herramientas y frameworks para garantizar soluciones modernas</p>
-            </div>
-            <div class="why-card">
-                <div class="why-number">03</div>
-                <h4>Compromiso con la Calidad</h4>
-                <p>Testing riguroso y buenas prácticas en cada proyecto que desarrollamos</p>
-            </div>
-            <div class="why-card">
-                <div class="why-number">04</div>
-                <h4>Asociación Estratégica</h4>
-                <p>Somos tu socio en la transformación digital, no solo un proveedor</p>
-            </div>
-            <div class="why-card">
-                <div class="why-number">05</div>
-                <h4>Soporte Continuo</h4>
-                <p>Acompañamiento antes, durante y después del proyecto para garantizar éxito</p>
-            </div>
-            <div class="why-card">
-                <div class="why-number">06</div>
-                <h4>Grupo LRP 24</h4>
-                <p>Respaldo de un holding empresarial consolidado con diversas unidades de negocio</p>
             </div>
         </div>
     </div>

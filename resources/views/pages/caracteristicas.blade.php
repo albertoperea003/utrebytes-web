@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Características - UtreBytes')
+@section('title', 'Servicios - UtreBytes')
 
 @section('content')
 <div class="characteristics-container">

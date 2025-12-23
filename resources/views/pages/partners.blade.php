@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Partners - UtreBytes')
+@section('title', 'Clientes - UtreBytes')
 
 @section('content')
 <div class="partners-container">
