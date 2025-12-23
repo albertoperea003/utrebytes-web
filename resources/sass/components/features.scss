@@ -1,9 +1,14 @@
 @use '../variables' as *;
 @use '../mixins' as *;
+@use 'sass:color' as color;
 
 .features {
-    background-color: $white;
-    padding: $space-2xl $space-xl;
+    background: linear-gradient(135deg, #fafafa 0%, $white 100%);
+    padding: $space-4xl $space-xl;
+    
+    @include breakpoint($breakpoint-sm) {
+        padding: $space-2xl $space-xl;
+    }
     
     .container {
         max-width: 1200px;
@@ -22,6 +27,7 @@
             color: #1a1a1a;
             margin-bottom: $space-lg;
             font-size: $font-size-4xl;
+            letter-spacing: -0.02em;
         }
         
         p {
@@ -29,6 +35,7 @@
             max-width: 600px;
             margin: 0 auto;
             color: #666666;
+            font-weight: 400;
         }
     }
     
@@ -36,6 +43,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: $space-2xl;
+        margin-bottom: $space-3xl;
         
         @include breakpoint($breakpoint-md) {
             grid-template-columns: repeat(2, 1fr);
@@ -49,16 +57,48 @@
     }
     
     .feature-card {
-        @include card;
-        border-left: 4px solid $primary-color;
         padding: $space-2xl;
+        background: $white;
+        border-radius: $radius-xl;
+        border: 1px solid color.adjust(#e0e0e0, $lightness: 2%);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        transition: all $transition-normal;
+        position: relative;
+        overflow: hidden;
+        animation: fadeInUp 0.5s ease-out forwards;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, $primary-color, $accent-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform $transition-normal;
+        }
+        
+        &:hover {
+            border-color: $primary-color;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+            
+            &::before {
+                transform: scaleX(1);
+            }
+            
+            .feature-icon {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
         
         .feature-icon {
-            width: 60px;
-            height: 60px;
+            width: 64px;
+            height: 64px;
             background: linear-gradient(135deg, $primary-color, $secondary-color);
             border-radius: $radius-lg;
             @include flex-center;
@@ -69,18 +109,60 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: transform $transition-normal;
         }
         
         h3 {
             color: #1a1a1a;
             margin-bottom: $space-md;
             font-size: $font-size-xl;
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
         
         p {
             font-size: $font-size-base;
             color: #555555;
-            line-height: 1.6;
+            line-height: 1.7;
+            font-weight: 400;
         }
+        
+        &.hidden {
+            display: none;
+        }
+    }
+    
+    .features-actions {
+        display: flex;
+        justify-content: center;
+        margin-top: $space-3xl;
+        
+        .btn-show-more {
+            @include btn-primary;
+            padding: $space-md $space-3xl;
+            font-size: $font-size-base;
+            display: inline-flex;
+            align-items: center;
+            gap: $space-sm;
+            
+            i {
+                transition: transform $transition-normal;
+            }
+            
+            &.expanded i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

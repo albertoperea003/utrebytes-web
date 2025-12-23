@@ -39,8 +39,8 @@
         color: $accent-color;
         
         &:hover {
-            background-color: color.adjust($white, $lightness: -5%);
-            color: color.adjust($accent-color, $lightness: -10%);
+            background-color: color.adjust($white, $lightness: -3%);
+            color: color.adjust($accent-color, $lightness: -8%);
         }
     }
 }

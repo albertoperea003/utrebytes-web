@@ -26,7 +26,7 @@ a {
     transition: color $transition-fast;
 
     &:hover {
-        color: color.adjust($primary-color, $lightness: -10%);
+        color: color.adjust($primary-color, $lightness: -8%);
     }
 }
 

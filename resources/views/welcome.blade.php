@@ -1,77 +1,25 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'UtreBytes') }} - Bienvenido</title>
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-    <body>
-        <!-- Navigation -->
-        <nav>
-            <div class="nav-container">
-                <a href="#" class="nav-logo">
-                    <img src="{{ asset('images/logo2.png') }}" alt="UtreBytes Logo" class="logo-img">
-                </a>
-                <button class="menu-toggle" id="menuToggle">☰</button>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#features">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
-                        Inicio
-                    </a></li>
-                    <li><a href="#features">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
-                        </svg>
-                        Características
-                    </a></li>
-                    <li><a href="#cta">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                        Contacto
-                    </a></li>
-                    <li class="nav-button-mobile"><button class="nav-button">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                        Accede
-                    </button></li>
-                </ul>
-                <button class="nav-button nav-button-desktop">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                    Accede
-                </button>
-            </div>
-        </nav>
+@extends('layouts.app')
 
+@section('title', 'Contacto - UtreBytes')
+
+@section('content')
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ asset('images/hero_background.jpg') }}');">
             <div class="hero-content">
                 <h1>Bienvenido a UtreBytes</h1>
-                <p>Soluciones innovadoras para transformar tu negocio digital. Tecnología de vanguardia al servicio de tus necesidades.</p>
+                <p>Unidad tecnológica del GRUPO LRP 24 HOLDING S.L. 
+                <br> 
+                Tecnología de vanguardia al servicio de tus necesidades.   
+                </p>
                 <div class="hero-buttons">
-                    <button class="btn-primary-white">Comenzar Ahora</button>
-                    <button class="btn-secondary-white">Conoce Más</button>
+                    <a href="{{ route('caracteristicas') }}" class="btn-primary-white">Consultar servicios</a>
+                    <a href="{{ route('utrebytes') }}" class="btn-secondary-white">Conoce Más</a>
                 </div>
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Clientes Satisfechos</span>
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Empresas a disposición</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number">10K+</span>
@@ -140,6 +88,36 @@
                         <p>Auditorías, pentesting, monitorización continua, implementación de políticas ISO 27001 y protección
                         de infraestructuras críticas.</p>
                     </div>
+                    <div class="feature-card hidden">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Cloud, DevOps y Escalabilidad</h3>
+                        <p>Migración a cloud, contenedores Docker, pipelines CI/CD, infraestructura como código y
+                        monitorización escalable.</p>
+                    </div>
+                    <div class="feature-card hidden">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Business Intelligence y Analítica</h3>
+                        <p>Cuadros de mando Power BI, pipelines ETL, modelos predictivos para optimizar logística,
+                        mantenimiento y ventas.</p>
+                    </div>
+                    <div class="feature-card hidden">
+                        <div class="feature-icon">
+                            <i class="fas fa-users-gear"></i>
+                        </div>
+                        <h3>Formación y Captación de Talento (CUCO)</h3>
+                        <p>Programas formativos técnicos y prácticos, itinerarios personalizados, certificaciones y transferencia
+                        de talento al grupo.</p>
+                    </div>
+                </div>
+                <div class="features-actions">
+                    <button class="btn-show-more" id="showMoreBtn">
+                        Ver más características
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
             </div>
         </section>
@@ -148,52 +126,8 @@
         <section class="cta" id="cta">
             <div class="container">
                 <h2>¿Listo para transformar tu negocio?</h2>
-                <p>Únete a cientos de empresas que ya confían en nuestras soluciones. Contacta con nosotros hoy mismo.</p>
-                <button class="cta-button">Solicitar Demostración</button>
+                <p>Únete a decenas de empresas que ya confían en nuestras soluciones. Contacta con nosotros hoy mismo.</p>
+                <a href="{{ route('contacto') }}" class="cta-button">Contacta</a>
             </div>
         </section>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>UtreBytes</h4>
-                    <p>Soluciones tecnológicas innovadoras para el futuro de tu negocio.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Producto</h4>
-                    <ul>
-                        <li><a href="#">Características</a></li>
-                        <li><a href="#">Precios</a></li>
-                        <li><a href="#">Seguridad</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#">Acerca de</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Empleos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Términos</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-bottom">
-                <p class="footer-text">&copy; 2025 UtreBytes. Todos los derechos reservados.</p>
-                <div class="footer-links">
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                </div>
-            </div>
-        </footer>
-    </body>
-</html>
+@endsection
