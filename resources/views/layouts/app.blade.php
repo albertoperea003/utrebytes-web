@@ -42,7 +42,7 @@
                 </li>
                 <li><a class="navbar__link" href="{{ route('recursos') }}">Recursos</a></li>
                 <li><a class="navbar__link" href="{{ route('utrebytes') }}">Conócenos</a></li>
-                <li><a class="navbar__link" href="{{ route('partners') }}">Partners</a></li>
+                <li><a class="navbar__link" href="{{ route('partners') }}">Clientes</a></li>
                 <!-- <li><a class="navbar__link" href="{{ route('clientes') }}">Clientes</a></li> -->
                 <li><a class="navbar__link" href="{{ route('contacto') }}">Contacto</a></li>
                 <li class="navbar__menu-item--cta">

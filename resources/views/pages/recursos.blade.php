@@ -396,14 +396,5 @@
             </div>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="recursos-cta" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('{{ asset('images/heros/hero_servicios.jpg') }}');">
-        <div class="container">
-            <h2>¿Necesitas Ayuda?</h2>
-            <p>Nuestro equipo de soporte está disponible para responder todas tus preguntas y ayudarte a integrar nuestros servicios</p>
-            <a href="{{ route('contacto') }}" class="btn-primary">Contactar Soporte</a>
-        </div>
-    </section>
 </div>
 @endsection
