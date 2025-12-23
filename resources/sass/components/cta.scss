@@ -3,7 +3,10 @@
 @use 'sass:color' as color;
 
 .cta {
-    @include gradient($accent-color, color.adjust($accent-color, $lightness: -10%));
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: $white;
     text-align: center;
     padding: $space-4xl $space-xl;

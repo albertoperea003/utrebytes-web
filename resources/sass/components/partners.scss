@@ -19,7 +19,10 @@
 .partners-header {
     padding: 4rem 0;
     text-align: center;
-    background: linear-gradient(135deg, rgba($primary-color, 0.1) 0%, rgba($accent-color, 0.05) 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     h1 {
         font-size: 2.75rem;
@@ -190,7 +193,10 @@
 .partners-cta {
     padding: 4rem 0;
     text-align: center;
-    background: linear-gradient(135deg, rgba($primary-color, 0.1) 0%, rgba($accent-color, 0.05) 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     h2 {
         font-size: 2rem;
@@ -209,9 +215,7 @@
             font-size: 1.5rem;
         }
     }
-}
-
-.cta-button {
+    .cta-button {
     display: inline-block;
     padding: 0.75rem 2rem;
     background: linear-gradient(120deg, $accent-color, $primary-color);
@@ -227,6 +231,9 @@
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     }
 }
+}
+
+
 
 .container {
     max-width: 1280px;

@@ -5,7 +5,7 @@
 @section('content')
 <div class="partners-container">
     <!-- Header -->
-    <section class="partners-header">
+    <section class="partners-header" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('{{ asset('images/heros/hero_partners.jpg') }}');">
         <div class="container">
             <h1>GRUPO LRP 24 HOLDING S.L.</h1>
             <p>Descubre las empresas que forman parte de nuestro ecosistema empresarial</p>
@@ -191,7 +191,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="partners-cta">
+    <section class="partners-cta" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('{{ asset('images/heros/hero_partners.jpg') }}');">
         <div class="container">
             <h2>Trabajamos juntos para tu éxito</h2>
             <p>Descubre cómo nuestro ecosistema de empresas puede ayudarte a crecer</p>

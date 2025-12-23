@@ -4,10 +4,10 @@
 
 .hero {
     color: $white;
-    min-height: 100vh;
+    min-height: 60vh;
     @include flex-column;
     @include flex-center;
-    padding: 0 $space-xl $space-2xl $space-xl;
+    padding: $space-4xl $space-xl $space-4xl $space-xl;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -30,12 +30,12 @@
     }
     
     @include breakpoint($breakpoint-md) {
-        min-height: 80vh;
+        min-height: 50vh;
         padding: $space-3xl $space-lg;
     }
     
     @include breakpoint($breakpoint-sm) {
-        min-height: 70vh;
+        min-height: 45vh;
         padding: $space-2xl $space-md;
     }
     
@@ -47,28 +47,28 @@
         
         h1 {
             font-size: $font-size-5xl;
-            margin-bottom: $space-xl;
+            margin-bottom: $space-lg;
             line-height: 1.1;
             
             @include breakpoint($breakpoint-md) {
                 font-size: $font-size-4xl;
-                margin-bottom: $space-lg;
+                margin-bottom: $space-md;
             }
             
             @include breakpoint($breakpoint-sm) {
                 font-size: $font-size-3xl;
-                margin-bottom: $space-md;
+                margin-bottom: $space-sm;
             }
         }
         
         p {
             font-size: $font-size-lg;
-            margin-bottom: $space-2xl;
+            margin-bottom: $space-xl;
             color: rgba($white, 0.95);
             
             @include breakpoint($breakpoint-sm) {
                 font-size: $font-size-base;
-                margin-bottom: $space-xl;
+                margin-bottom: $space-lg;
             }
         }
     }
@@ -104,43 +104,6 @@
             &:hover {
                 background-color: $white;
                 color: $primary-color;
-            }
-        }
-    }
-    
-    .hero-stats {
-        position: relative;
-        z-index: 1;
-        margin-top: $space-4xl;
-        @include flex-center;
-        gap: $space-3xl;
-        
-        @include breakpoint($breakpoint-md) {
-            gap: $space-xl;
-            margin-top: $space-2xl;
-        }
-        
-        @include breakpoint($breakpoint-sm) {
-            flex-direction: column;
-            gap: $space-lg;
-        }
-        
-        .stat {
-            text-align: center;
-            
-            .stat-number {
-                font-size: $font-size-4xl;
-                font-weight: 800;
-                display: block;
-                
-                @include breakpoint($breakpoint-sm) {
-                    font-size: $font-size-3xl;
-                }
-            }
-            
-            .stat-label {
-                font-size: $font-size-sm;
-                opacity: 0.9;
             }
         }
     }

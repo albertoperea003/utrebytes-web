@@ -13,7 +13,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar__inner">
-            <a class="navbar__brand" href="{{ route('inicio') }}">Utrebytes</a>
+            <a class="navbar__brand" href="{{ route('inicio') }}">
+                <img src="{{ asset('images/logo2.png') }}" alt="UtreBytes" class="navbar__logo">
+            </a>
 
             <button class="navbar__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbarMenu">
                 <span aria-hidden="true"></span>
@@ -21,10 +23,26 @@
 
             <ul class="navbar__menu" id="navbarMenu">
                 <li><a class="navbar__link" href="{{ route('inicio') }}">Inicio</a></li>
-                <li><a class="navbar__link" href="{{ route('caracteristicas') }}">Servicios</a></li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__link" href="{{ route('caracteristicas') }}">
+                        Servicios
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="navbar__dropdown-menu">
+                        <li><a href="{{ route('caracteristicas') }}">Software a Medida</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">IA y Modelos Generativos</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">SI-GO!</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">ERP Inteligente</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">Automatizaciones</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">Ciberseguridad</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">Cloud y Escalabilidad</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">Business Intelligence y Analítica</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">Formación y Captación</a></li>
+                    </ul>
+                </li>
                 <li><a class="navbar__link" href="{{ route('recursos') }}">Recursos</a></li>
                 <li><a class="navbar__link" href="{{ route('utrebytes') }}">Conócenos</a></li>
-                <!-- <li><a class="navbar__link" href="{{ route('partners') }}">Partners</a></li> -->
+                <li><a class="navbar__link" href="{{ route('partners') }}">Partners</a></li>
                 <!-- <li><a class="navbar__link" href="{{ route('clientes') }}">Clientes</a></li> -->
                 <li><a class="navbar__link" href="{{ route('contacto') }}">Contacto</a></li>
                 <li class="navbar__menu-item--cta">
@@ -48,7 +66,7 @@
                 <div class="footer-section">
                     <h4>Producto</h4>
                     <ul>
-                        <li><a href="#">Características</a></li>
+                        <li><a href="#">Servicios</a></li>
                         <li><a href="#">Precios</a></li>
                         <li><a href="#">Seguridad</a></li>
                     </ul>

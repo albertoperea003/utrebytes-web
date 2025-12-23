@@ -23,14 +23,8 @@
 	}
 
 	&__brand {
-		font-family: $font-heading;
-		font-size: $font-size-xl;
-		font-weight: 700;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		@include gradient($primary-color, $accent-color);
-		-webkit-background-clip: text;
-		color: transparent;
+		display: inline-flex;
+		align-items: center;
 		text-decoration: none;
 		position: relative;
 
@@ -47,6 +41,13 @@
 		&:hover::after {
 			opacity: 1;
 		}
+	}
+
+	&__logo {
+		height: 50px;
+		width: auto;
+		display: block;
+		object-fit: contain;
 	}
 
 	&__menu {
@@ -201,6 +202,91 @@
 		}
 	}
 
+	&__dropdown {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&:hover .navbar__dropdown-menu {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+			pointer-events: auto;
+		}
+
+		.navbar__link {
+			i {
+				font-size: 0.6rem;
+				transition: transform $transition-normal;
+			}
+		}
+
+		&:hover .navbar__link i {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__dropdown-menu {
+		position: absolute;
+		top: calc(100% + $space-md);
+		left: 0;
+		list-style: none;
+		margin: 0;
+		padding: $space-md 0;
+		background: color.mix($dark-bg, $light-bg, 65%);
+		border: 1px solid color.scale($border-color, $lightness: 10%);
+		border-radius: $radius-lg;
+		backdrop-filter: blur(18px);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+		min-width: 280px;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+		pointer-events: none;
+		transition: opacity $transition-normal, visibility $transition-normal, transform $transition-normal;
+		z-index: 1001;
+
+		li {
+			padding: 0;
+			margin: 0;
+
+			a {
+				display: block;
+				padding: $space-sm $space-lg;
+				color: $text-light;
+				text-decoration: none;
+				font-size: $font-size-sm;
+				letter-spacing: 0.05em;
+				text-transform: none;
+				transition: all $transition-normal;
+				position: relative;
+				white-space: nowrap;
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					width: 3px;
+					background: linear-gradient(180deg, $primary-color, $accent-color);
+					transform: scaleY(0);
+					transform-origin: top;
+					transition: transform $transition-normal;
+				}
+
+				&:hover {
+					color: $white;
+					background: color.scale($border-color, $lightness: 20%);
+
+					&::before {
+						transform: scaleY(1);
+					}
+				}
+			}
+		}
+	}
+
 	@include breakpoint(1200px) {
 		padding: $space-sm 0;
 
@@ -227,6 +313,47 @@
 			max-height: 0;
 			overflow: hidden;
 			transition: transform $transition-normal, opacity $transition-normal, max-height $transition-normal, padding $transition-fast, margin $transition-fast;
+		}
+
+		&__dropdown {
+			width: 100%;
+
+			.navbar__link {
+				width: 100%;
+				padding: $space-sm 0;
+				justify-content: space-between;
+			}
+
+			&:hover .navbar__dropdown-menu {
+				position: static;
+				opacity: 1;
+				visibility: visible;
+				transform: none;
+				pointer-events: auto;
+				background: transparent;
+				border: none;
+				backdrop-filter: none;
+				box-shadow: none;
+				margin-left: $space-lg;
+				margin-top: $space-sm;
+				min-width: auto;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		&__dropdown-menu {
+			flex-direction: column;
+
+			li a {
+				padding: $space-sm 0;
+				font-size: $font-size-sm;
+
+				&:hover {
+					background: transparent;
+				}
+			}
 		}
 
 		&__link {

@@ -5,7 +5,7 @@
 @section('content')
 <div class="characteristics-container">
     <!-- Header -->
-    <section class="characteristics-header">
+    <section class="characteristics-header" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('{{ asset('images/heros/hero_servicios.jpg') }}');">
         <div class="container">
             <h1>Nuestros principales servicios</h1>
             <p>Descubre todas las soluciones y servicios que hacen de UtreBytes tu socio tecnológico ideal</p>
@@ -245,7 +245,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="characteristics-cta">
+    <section class="characteristics-cta" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('{{ asset('images/heros/hero_servicios.jpg') }}');">
         <div class="container">
             <h2>¿Listo para transformar tu negocio?</h2>
             <p>Descubre cómo nuestras soluciones pueden mejorar tu operación</p>
