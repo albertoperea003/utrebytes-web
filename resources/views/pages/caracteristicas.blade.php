@@ -27,7 +27,7 @@
                             Aplicaciones web y móviles personalizadas para tus necesidades.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                             Soluciones de inteligencia artificial de última generación.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                             Gestión integral de siniestros y reparaciones.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                             Sistema ERP para optimizar operaciones de tu negocio.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                             Automatiza tareas repetitivas con agentes inteligentes.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                             Protege tu infraestructura con estándares internacionales.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                             Toma decisiones basadas en datos reales.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                             Infraestructura moderna con confiabilidad garantizada.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                             Guía experta para tu transformación digital.
                         </p>
                         <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Solicitar</a>
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
