@@ -37,3 +37,6 @@ Route::get('/contacto', function () {
 Route::get('/accede', function () {
     return view('pages.accede');
 })->name('accede');
+Route::get('/terminos-cookies', function () {
+    return view('pages.terminos-cookies');
+})->name('terminos-cookies');

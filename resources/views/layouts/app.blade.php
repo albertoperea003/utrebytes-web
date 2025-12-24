@@ -46,9 +46,9 @@
                 <li><a class="navbar__link" href="{{ route('partners') }}">Clientes</a></li>
                 <!-- <li><a class="navbar__link" href="{{ route('clientes') }}">Clientes</a></li> -->
                 <li><a class="navbar__link" href="{{ route('contacto') }}">Contacto</a></li>
-                <li class="navbar__menu-item--cta">
+                <!-- <li class="navbar__menu-item--cta">
                     <a class="navbar__link navbar__link--cta" href="{{ route('accede') }}">Accede</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
@@ -71,25 +71,23 @@
                 <div class="footer-section">
                     <h4>Producto</h4>
                     <ul>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Precios</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">Servicios</a></li>
+                        <li><a href="{{ route('caracteristicas') }}">Precios</a></li>
                         <li><a href="#">Seguridad</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Empresa</h4>
                     <ul>
-                        <li><a href="#">Acerca de</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Empleos</a></li>
+                        <li><a href="{{ route('utrebytes') }}">Acerca de</a></li>
+                        <li><a href="{{ route('recursos') }}">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Términos</a></li>
-                        <li><a href="#">Cookies</a></li>
+                        <li><a href="{{ route('terminos-cookies') }}">Términos y Cookies</a></li>
+                        <li><a href="#">Datos</a></li>
                     </ul>
                 </div>
             </div>
@@ -97,9 +95,9 @@
             <div class="footer-bottom">
                 <p class="footer-text">&copy; 2025 UtreBytes. Todos los derechos reservados.</p>
                 <div class="footer-links">
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
+                    <a href="https://x.com/?lang=es">Twitter</a>
+                    <a href="https://es.linkedin.com/">LinkedIn</a>
+                    <a href="https://github.com/?locale=es">GitHub</a>
                 </div>
             </div>
         </footer>
