@@ -77,7 +77,7 @@
                     </div>
                     <div class="info-content">
                         <h3>Dirección</h3>
-                        <p>Calle Principal, 123<br>28001 Madrid, España</p>
+                        <p>Calle Principal, 123<br>41710 Utrera, España</p>
                     </div>
                 </div>
 
