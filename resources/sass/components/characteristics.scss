@@ -35,12 +35,12 @@
 .characteristics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: $space-2xl;
+    gap: $space-lg;
     margin-bottom: $space-3xl;
 
     @include breakpoint($breakpoint-md) {
         grid-template-columns: 1fr;
-        gap: $space-xl;
+        gap: $space-md;
     }
 }
 
@@ -103,6 +103,29 @@
     margin-bottom: $space-md;
     font-size: 0.85rem;
     line-height: 1.4;
+}
+
+.characteristic-card__details {
+    list-style: none;
+    margin: $space-md 0;
+    padding: 0;
+    font-size: 0.8rem;
+    color: #666666;
+    line-height: 1.6;
+
+    li {
+        margin-bottom: $space-sm;
+        padding-left: $space-lg;
+        position: relative;
+
+        &::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: $primary-color;
+            font-weight: 600;
+        }
+    }
 }
 
 .characteristic-card__features {

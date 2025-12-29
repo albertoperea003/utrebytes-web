@@ -30,15 +30,119 @@
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="navbar__dropdown-menu">
-                        <li><a href="{{ route('caracteristicas') }}">Software a Medida</a></li>
-                        <li><a href="{{ route('caracteristicas') }}">IA y Modelos Generativos</a></li>
-                        <li><a href="{{ route('caracteristicas') }}">SI-GO!</a></li>
-                        <li><a href="{{ route('caracteristicas') }}">ERP Inteligente</a></li>
-                        <li><a href="{{ route('caracteristicas') }}">Automatizaciones</a></li>
-                        <li><a href="{{ route('caracteristicas') }}">Ciberseguridad</a></li>
-                        <li><a href="{{ route('caracteristicas') }}">Cloud y Escalabilidad</a></li>
-                        <li><a href="{{ route('caracteristicas') }}">Business Intelligence y Analítica</a></li>
-                        <li><a href="{{ route('caracteristicas') }}">Formación y Captación</a></li>
+                        <li>
+                            <a href="{{ route('caracteristicas') }}" class="navbar__dropdown-item">
+                                <div class="navbar__dropdown-content">
+                                    <div>
+                                        <span class="navbar__dropdown-title">Soluciones digitales a medida</span>
+                                        <span class="navbar__dropdown-desc">Software personalizado para tu negocio</span>
+                                    </div>
+                                    <svg class="navbar__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('caracteristicas') }}" class="navbar__dropdown-item">
+                                <div class="navbar__dropdown-content">
+                                    <div>
+                                        <span class="navbar__dropdown-title">Inteligencia Artificial</span>
+                                        <span class="navbar__dropdown-desc">IA integrada y orientada a resultados</span>
+                                    </div>
+                                    <svg class="navbar__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="1"></circle>
+                                        <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('caracteristicas') }}" class="navbar__dropdown-item">
+                                <div class="navbar__dropdown-content">
+                                    <div>
+                                        <span class="navbar__dropdown-title">Plataforma SI-GO!</span>
+                                        <span class="navbar__dropdown-desc">Producto propio especializado en el sector asegurador y reparaciones</span>
+                                    </div>
+                                    <svg class="navbar__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                        <rect x="3" y="14" width="7" height="7"></rect>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('caracteristicas') }}" class="navbar__dropdown-item">
+                                <div class="navbar__dropdown-content">
+                                    <div>
+                                        <span class="navbar__dropdown-title">ERP Inteligente y operativo</span>
+                                        <span class="navbar__dropdown-desc">Gestión empresarial potenciada con IA</span>
+                                    </div>
+                                    <svg class="navbar__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 6v6l4 2"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('caracteristicas') }}" class="navbar__dropdown-item">
+                                <div class="navbar__dropdown-content">
+                                    <div>
+                                        <span class="navbar__dropdown-title">Automatización y agentes autónomos</span>
+                                        <span class="navbar__dropdown-desc">Convertimos procesos repetitivos en sistemas automáticos</span>
+                                    </div>
+                                    <svg class="navbar__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('caracteristicas') }}" class="navbar__dropdown-item">
+                                <div class="navbar__dropdown-content">
+                                    <div>
+                                        <span class="navbar__dropdown-title">Business Intelligence</span>
+                                        <span class="navbar__dropdown-desc">Analítica y datos convertidos en decisiones</span>
+                                    </div>
+                                    <svg class="navbar__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="2" x2="12" y2="22"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('caracteristicas') }}" class="navbar__dropdown-item">
+                                <div class="navbar__dropdown-content">
+                                    <div>
+                                        <span class="navbar__dropdown-title">Ciberseguridad</span>
+                                        <span class="navbar__dropdown-desc">Seguridad informática y normativas</span>
+                                    </div>
+                                    <svg class="navbar__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('caracteristicas') }}" class="navbar__dropdown-item">
+                                <div class="navbar__dropdown-content">
+                                    <div>
+                                        <span class="navbar__dropdown-title">Soporte, mantenimiento y SLA</span>
+                                        <span class="navbar__dropdown-desc">Acompañamiento continuo post entrega</span>
+                                    </div>
+                                    <svg class="navbar__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 1 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li><a class="navbar__link" href="{{ route('recursos') }}">Recursos</a></li>

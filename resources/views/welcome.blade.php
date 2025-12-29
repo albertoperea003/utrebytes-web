@@ -30,58 +30,49 @@
                         <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_1.jpg') }}" alt="Desarrollo de Software a Medida" loading="lazy">
                         </div>
-                        <h3>Desarrollo de Software a Medida</h3>
+                        <h3>Soluciones digitales a medida</h3>
                     </div>
                     <div class="feature-card">
                         <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_2.jpg') }}" alt="Inteligencia Artificial y Modelos Generativos" loading="lazy">
                         </div>
-                        <h3>Inteligencia Artificial y Modelos Generativos</h3>
+                        <h3>Inteligencia Artificial aplicada al negocio</h3>
                     </div>
                     <div class="feature-card">
                         <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_3.jpg') }}" alt="SI-GO! — Plataforma para reparaciones y aseguradoras" loading="lazy">
                         </div>
-                        <h3>SI-GO! — Plataforma para reparaciones y aseguradoras</h3>
+                        <h3>Plataforma SI-GO – Gestión inteligente de siniestros</h3>
                     </div>
                     <div class="feature-card">
                         <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_4.jpg') }}" alt="ERP Inteligente" loading="lazy">
                         </div>
-                        <h3>ERP Inteligente</h3>
+                        <h3>ERP inteligente y operativo</h3>
                     </div>
                     <div class="feature-card">
                         <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_5.jpg') }}" alt="Automatización de Procesos y Agentes Autónomos" loading="lazy">
                         </div>
-                        <h3>Automatización de Procesos y Agentes Autónomos</h3>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-image">
-                            <img src="{{ asset('images/servicios/servicio_6.jpg') }}" alt="Ciberseguridad y Cumplimiento" loading="lazy">
-                        </div>
-                        <h3>Ciberseguridad y Cumplimiento</h3>
+                        <h3>Automatización avanzada y agentes autónomos</h3>
                     </div>
                     <div class="feature-card hidden">
                         <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_7.jpg') }}" alt="Cloud, DevOps y Escalabilidad" loading="lazy">
                         </div>
-                        <h3>Cloud, DevOps y Escalabilidad</h3>
+                        <h3>Business Intelligence y y analítica avanzada</h3>
                     </div>
-                    <div class="feature-card hidden">
+                    <div class="feature-card">
                         <div class="feature-image">
-                            <img src="{{ asset('images/servicios/servicio_8.jpg') }}" alt="Business Intelligence y Analítica" loading="lazy">
+                            <img src="{{ asset('images/servicios/servicio_6.jpg') }}" alt="Ciberseguridad y Cumplimiento" loading="lazy">
                         </div>
-                        <h3>Business Intelligence y Analítica</h3>
+                        <h3>Ciberseguridad y cumplimiento normativo</h3>
                     </div>
                     <div class="feature-card hidden">
                         <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_9.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                         </div>
-                        <h3>Formación y Captación de Talento (CUCO)</h3>
-                    </div>
-                </div>
-                        <h3>Formación y Captación de Talento (CUCO)</h3>
+                        <h3>Soporte, mantenimiento y SLA</h3>
                     </div>
                 </div>
                 <div class="features-actions">
