@@ -30,6 +30,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
 
     &:hover {
         transform: scale(1.1);
@@ -247,9 +249,11 @@
     padding: 0.625rem 1rem;
     border: 1px solid #e0e0e0;
     border-radius: $radius-md;
-    font-size: 0.9rem;
+    font-size: 16px;
     font-family: inherit;
     transition: all $transition-normal;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
 
     &:focus {
         outline: none;
