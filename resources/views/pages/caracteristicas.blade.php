@@ -164,8 +164,28 @@
                         </div>
                     </div>
                 </div>
-                
                 <!-- Feature 8 -->
+                <div class="characteristic-card">
+                    <div class="characteristic-card__image">
+                        <img src="{{ asset('images/servicios/servicio_8.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
+                    </div>
+                    <div class="characteristic-card__content">
+                        <h3>Infraestructura IT, Comunicaciones y Servicios Cloud</h3>
+                        <p class="characteristic-card__description">
+                            Soluciones completas de infraestructura tecnológica para empresas.
+                        </p>
+                        <ul class="characteristic-card__details">
+                            <li>Centralitas virtuales y comunicaciones unificadas (B2Com).</li>
+                            <li>Servidores en la nube.</li>
+                            <li>Hosting profesional.</li>
+                            <li>Dominios y gestión DNS.</li>
+                        </ul>
+                        <div class="characteristic-card__actions">
+                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 9 -->
                 <div class="characteristic-card">
                     <div class="characteristic-card__image">
                         <img src="{{ asset('images/servicios/servicio_9.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">

@@ -56,12 +56,6 @@
                         </div>
                         <h3>Automatización avanzada y agentes autónomos</h3>
                     </div>
-                    <div class="feature-card hidden">
-                        <div class="feature-image">
-                            <img src="{{ asset('images/servicios/servicio_7.jpg') }}" alt="Cloud, DevOps y Escalabilidad" loading="lazy">
-                        </div>
-                        <h3>Business Intelligence y y analítica avanzada</h3>
-                    </div>
                     <div class="feature-card">
                         <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_6.jpg') }}" alt="Ciberseguridad y Cumplimiento" loading="lazy">
@@ -70,9 +64,21 @@
                     </div>
                     <div class="feature-card hidden">
                         <div class="feature-image">
+                            <img src="{{ asset('images/servicios/servicio_7.jpg') }}" alt="Cloud, DevOps y Escalabilidad" loading="lazy">
+                        </div>
+                        <h3>Business Intelligence y y analítica avanzada</h3>
+                    </div>
+                    <div class="feature-card hidden">
+                        <div class="feature-image">
                             <img src="{{ asset('images/servicios/servicio_9.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                         </div>
                         <h3>Soporte, mantenimiento y SLA</h3>
+                    </div>
+                    <div class="feature-card hidden">
+                        <div class="feature-image">
+                            <img src="{{ asset('images/servicios/servicio_8.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
+                        </div>
+                        <h3>Infraestructura IT, Comunicaciones y Servicios Cloud</h3>
                     </div>
                 </div>
                 <div class="features-actions">
