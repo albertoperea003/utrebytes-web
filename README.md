@@ -1,3 +1,12 @@
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
+
 # UtreBytes Web
 
 Aplicación web desarrollada con Laravel 12 y tecnologías modernas.
@@ -137,37 +146,6 @@ npm run build
 
 Esto minificará y optimizará todos los assets para producción.
 
-## 🌐 Despliegue
-
-### Servidor Web (Apache/Nginx)
-
-1. **Configurar el servidor web** para que apunte a la carpeta `public/`
-2. **Configurar permisos:**
-
-```bash
-# Dar permisos de escritura al usuario web
-chmod -R 775 storage/
-chmod -R 775 bootstrap/cache/
-```
-
-3. **Optimizar para producción:**
-
-```bash
-composer install --no-dev
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-npm run build
-```
-
-### Usando Docker (Opcional)
-
-Laravel Sail está incluido. Para usar Docker:
-
-```bash
-./vendor/bin/sail up
-```
-
 ### Variables de Entorno en Producción
 
 En el servidor, configurar `.env` con:
@@ -185,43 +163,9 @@ DB_PASSWORD=tu-contraseña
 MAIL_HOST=tu-servidor-smtp
 ```
 
-## 📝 Estructura del Proyecto
-
-```
-├── app/
-│   ├── Http/
-│   │   └── Controllers/    # Controladores
-│   ├── Models/            # Modelos Eloquent
-│   └── Providers/         # Service Providers
-├── config/               # Archivos de configuración
-├── database/
-│   ├── migrations/        # Migraciones de BD
-│   ├── seeders/          # Seeds
-│   └── factories/        # Factories para testing
-├── public/               # Archivos públicos
-├── resources/
-│   ├── css/             # Estilos CSS/SASS
-│   ├── js/              # JavaScript
-│   └── views/           # Vistas Blade
-├── routes/              # Definición de rutas
-├── storage/             # Archivos generados
-├── tests/               # Tests
-└── vendor/              # Dependencias de Composer
-```
-
 ## 🔒 Seguridad
 
 - Nunca commitear el archivo `.env` al repositorio
 - Usar `.env.example` como referencia
 - Mantener las dependencias actualizadas: `composer update` y `npm update`
 - Ejecutar tests regularmente: `php artisan test`
-
-## 📞 Soporte
-
-Para reportar problemas o sugerencias, contactar al equipo de desarrollo.
-
-## 📄 Licencia
-
-Este proyecto está bajo licencia MIT.
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
