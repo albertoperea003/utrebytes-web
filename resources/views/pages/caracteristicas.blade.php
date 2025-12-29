@@ -22,10 +22,16 @@
                         <img src="{{ asset('images/servicios/servicio_1.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                     </div>
                     <div class="characteristic-card__content">
-                        <h3>Software a Medida</h3>
+                        <h3>Soluciones digitales a medida</h3>
                         <p class="characteristic-card__description">
-                            Aplicaciones web y móviles personalizadas para tus necesidades.
+                            Diseñamos y desarrollamos software alineado con procesos reales de negocio.
                         </p>
+                        <ul class="characteristic-card__details">
+                            <li>Aplicaciones web y móviles escalables.</li>
+                            <li>Desarrollo de plataformas empresariales a medida.</li>
+                            <li>Integración avanzada con sistemas externos (APIs, ERPs, CRMs).</li>
+                            <li>Arquitectura moderna, metodologías ágiles y pruebas automatizadas.</li>
+                        </ul>
                         <div class="characteristic-card__actions">
                             <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
@@ -38,10 +44,16 @@
                         <img src="{{ asset('images/servicios/servicio_2.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                     </div>
                     <div class="characteristic-card__content">
-                        <h3>IA y Modelos Generativos</h3>
+                        <h3>Inteligencia Artificial aplicada al negocio</h3>
                         <p class="characteristic-card__description">
-                            Soluciones de inteligencia artificial de última generación.
+                            IA integrada y orientada a resultados.
                         </p>
+                        <ul class="characteristic-card__details">
+                            <li>IA generativa integrada en procesos internos.</li>
+                            <li>Clasificación automática de documentos y expedientes.</li>
+                            <li>Análisis inteligente de datos y predicción de eventos.</li>
+                            <li>Asistentes virtuales internos y externos</li>
+                        </ul>
                         <div class="characteristic-card__actions">
                             <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
@@ -54,10 +66,16 @@
                         <img src="{{ asset('images/servicios/servicio_3.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                     </div>
                     <div class="characteristic-card__content">
-                        <h3>SI-GO! Plataforma de Reparaciones</h3>
+                        <h3>Plataforma SI-GO – Gestión inteligente de siniestros</h3>
                         <p class="characteristic-card__description">
-                            Gestión integral de siniestros y reparaciones.
+                            Producto propio especializado en el sector asegurador y reparaciones.
                         </p>
+                        <ul class="characteristic-card__details">
+                            <li>Gestión integral del ciclo de vida del siniestro.</li>
+                            <li>Asignación automática de profesionales y recursos.</li>
+                            <li>Generación de presupuestos inteligentes.</li>
+                            <li>Comunicación automatizada con clientes y proveedores.</li>
+                        </ul>
                         <div class="characteristic-card__actions">
                             <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
@@ -70,10 +88,16 @@
                         <img src="{{ asset('images/servicios/servicio_4.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                     </div>
                     <div class="characteristic-card__content">
-                        <h3>ERP Inteligente</h3>
+                        <h3>ERP inteligente y operativo</h3>
                         <p class="characteristic-card__description">
                             Sistema ERP para optimizar operaciones de tu negocio.
                         </p>
+                        <ul class="characteristic-card__details">
+                            <li>Planificación de trabajos y órdenes operativas.</li>
+                            <li>Gestión de inventario y recursos.</li>
+                            <li>Facturación automática y reporting en tiempo real.</li>
+                            <li>Integración con IA para optimizar flujos.</li>
+                        </ul>
                         <div class="characteristic-card__actions">
                             <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
@@ -86,74 +110,76 @@
                         <img src="{{ asset('images/servicios/servicio_5.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                     </div>
                     <div class="characteristic-card__content">
-                        <h3>Automatización de Procesos</h3>
+                        <h3>Automatización avanzada y agentes autónomos</h3>
                         <p class="characteristic-card__description">
-                            Automatiza tareas repetitivas con agentes inteligentes.
+                            Convertimos procesos repetitivos en sistemas automáticos.
                         </p>
+                        <ul class="characteristic-card__details">
+                            <li>Chatbots y asistentes conversacionales a medida.</li>
+                            <li>Automatización de flujos empresariales (RPA / n8n).</li>
+                            <li>Procesamiento automático de documentos y correos.</li>
+                            <li>Agentes autónomos para tareas recurrentes</li>
+                        </ul>
                         <div class="characteristic-card__actions">
                             <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
-
                 <!-- Feature 6 -->
-                <div class="characteristic-card">
-                    <div class="characteristic-card__image">
-                        <img src="{{ asset('images/servicios/servicio_6.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
-                    </div>
-                    <div class="characteristic-card__content">
-                        <h3>Ciberseguridad y Cumplimiento</h3>
-                        <p class="characteristic-card__description">
-                            Protege tu infraestructura con estándares internacionales.
-                        </p>
-                        <div class="characteristic-card__actions">
-                            <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 7 -->
                 <div class="characteristic-card">
                     <div class="characteristic-card__image">
                         <img src="{{ asset('images/servicios/servicio_7.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                     </div>
                     <div class="characteristic-card__content">
-                        <h3>Business Intelligence y Analytics</h3>
+                        <h3>Business Intelligence y y analítica avanzada</h3>
                         <p class="characteristic-card__description">
-                            Toma decisiones basadas en datos reales.
+                            Datos convertidos en decisiones.
                         </p>
+                        <ul class="characteristic-card__details">
+                            <li>Cuadros de mando en Power BI y soluciones personalizadas.</li>
+                            <li>Análisis operativo y financiero.</li>
+                            <li>KPIs en tiempo real integrados con sistemas internos.</li>
+                        </ul>
                         <div class="characteristic-card__actions">
                             <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Feature 8 -->
+                <!-- Feature 7 -->
                 <div class="characteristic-card">
                     <div class="characteristic-card__image">
-                        <img src="{{ asset('images/servicios/servicio_8.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
+                        <img src="{{ asset('images/servicios/servicio_6.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                     </div>
                     <div class="characteristic-card__content">
-                        <h3>Cloud y Escalabilidad</h3>
+                        <h3>Ciberseguridad y cumplimiento normativo</h3>
                         <p class="characteristic-card__description">
-                            Infraestructura moderna con confiabilidad garantizada.
+                            Seguridad informática y normativas.
                         </p>
+                        <ul class="characteristic-card__details">
+                            <li>Adecuación a normativas y estándares (ISO 27001, RGPD).</li>
+                            <li>Documentación técnica y de seguridad.</li>
+                        </ul>
                         <div class="characteristic-card__actions">
                             <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Feature 9 -->
+                
+                <!-- Feature 8 -->
                 <div class="characteristic-card">
                     <div class="characteristic-card__image">
                         <img src="{{ asset('images/servicios/servicio_9.jpg') }}" alt="Formación y Captación de Talento (CUCO)" loading="lazy">
                     </div>
                     <div class="characteristic-card__content">
-                        <h3>Consultoría Tecnológica</h3>
+                        <h3>Soporte, mantenimiento y SLA</h3>
                         <p class="characteristic-card__description">
-                            Guía experta para tu transformación digital.
+                            Acompañamiento continuo post entrega.
                         </p>
+                        <ul class="characteristic-card__details">
+                            <li>Soporte técnico especializado.</li>
+                            <li>Monitorización proactiva de sistemas.</li>
+                            <li>Acuerdos SLA adaptados al cliente.</li>
+                        </ul>
                         <div class="characteristic-card__actions">
                             <a href="{{ route('contacto') }}" class="btn-primary">Consultar</a>
                         </div>
