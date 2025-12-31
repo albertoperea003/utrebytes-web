@@ -6,28 +6,6 @@
     background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
 }
 
-.characteristics-header {
-    padding: $space-4xl 0;
-    text-align: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    h1 {
-        font-size: $font-size-4xl;
-        margin-bottom: $space-lg;
-        color: #1a1a1a;
-    }
-
-    p {
-        font-size: $font-size-lg;
-        color: #666666;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
-
 .characteristics-section {
     padding: $space-4xl 0;
 }
@@ -209,13 +187,6 @@
 }
 
 @include breakpoint($breakpoint-sm) {
-    .characteristics-header h1 {
-        font-size: $font-size-3xl;
-    }
-
-    .characteristics-header p {
-        font-size: $font-size-base;
-    }
 
     .characteristics-section {
         padding: $space-2xl 0;

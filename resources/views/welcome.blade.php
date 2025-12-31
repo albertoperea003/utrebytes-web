@@ -7,9 +7,6 @@
         <section class="hero" style="background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(15, 35, 55, 0.75) 50%, rgba(212, 175, 55, 0.15) 100%), url('{{ asset('images/heros/hero_background.jpg') }}');">
             <div class="hero-container">
                 <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-text">Transformación Digital</span>
-                    </div>
                     <h1 class="hero-title">
                         Tecnología de vanguardia para tu negocio
                     </h1>
