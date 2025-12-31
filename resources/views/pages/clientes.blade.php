@@ -3,9 +3,20 @@
 @section('title', 'Clientes - UtreBytes')
 
 @section('content')
+<!-- Hero Section -->
+<section class="hero" style="background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(15, 35, 55, 0.75) 50%, rgba(212, 175, 55, 0.15) 100%), url('{{ asset('images/heros/hero_background.jpg') }}');">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-text">Nuestros Clientes</span>
+            </div>
+            <h1 class="hero-title">Empresas que confían en nosotros</h1>
+            <p class="hero-subtitle">Descubre cómo hemos ayudado a más de 500 empresas a transformar su negocio</p>
+        </div>
+    </div>
+</section>
+
 <div class="container">
-    <h1>Nuestros Clientes</h1>
-    <p>Empresas que confían en nuestras soluciones</p>
 
     <section class="mt-5">
         <h2>Casos de Éxito</h2>

@@ -4,17 +4,35 @@
 
 .hero {
     color: $white;
-    min-height: 60vh;
-    @include flex-column;
+    min-height: 35vh;
     @include flex-center;
-    padding: $space-4xl $space-xl $space-4xl $space-xl;
-    text-align: center;
+    padding: $space-2xl $space-xl;
     position: relative;
     overflow: hidden;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+    @include breakpoint($breakpoint-xl) {
+        min-height: 32vh;
+        padding: $space-2xl $space-2xl;
+    }
+    
+    @include breakpoint($breakpoint-lg) {
+        min-height: 30vh;
+        padding: $space-xl $space-lg;
+    }
+    
+    @include breakpoint($breakpoint-md) {
+        min-height: auto;
+        padding: $space-2xl $space-lg;
+    }
+    
+    @include breakpoint($breakpoint-sm) {
+        min-height: auto;
+        padding: $space-2xl $space-md;
+    }
     
     &::before {
         content: '';
@@ -23,89 +41,310 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+        background: 
+            radial-gradient(circle at 30% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 40%),
+            radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+            linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
         pointer-events: none;
-        z-index: 0;
+        z-index: 1;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.3;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+.hero-container {
+    @include flex-center;
+    gap: $space-4xl;
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+    
+    @include breakpoint($breakpoint-lg) {
+        gap: $space-2xl;
     }
     
     @include breakpoint($breakpoint-md) {
-        min-height: 50vh;
-        padding: $space-3xl $space-lg;
+        flex-direction: column;
+        gap: $space-2xl;
+        text-align: center;
     }
     
     @include breakpoint($breakpoint-sm) {
-        min-height: 45vh;
-        padding: $space-2xl $space-md;
+        gap: $space-xl;
+    }
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    animation: slideInLeft 0.8s ease-out;
+    
+    @include breakpoint($breakpoint-md) {
+        max-width: 100%;
+        animation: fadeInUp 0.8s ease-out;
+    }
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: $space-xs $space-lg;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 50px;
+    margin-bottom: $space-lg;
+    animation: fadeIn 1s ease-out 0.2s both;
+    
+    .badge-text {
+        font-size: $font-size-sm;
+        font-weight: 600;
+        color: $white;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+}
+
+.hero-title {
+    font-size: $font-size-4xl;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: $space-xl;
+    background: linear-gradient(135deg, $white 0%, rgba(255, 255, 255, 0.85) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+    letter-spacing: -0.5px;
+    
+    @include breakpoint($breakpoint-lg) {
+        font-size: $font-size-3xl;
     }
     
-    .hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 600px;
-        animation: fadeInUp 1s ease-out;
-        
-        h1 {
-            font-size: $font-size-5xl;
-            margin-bottom: $space-lg;
-            line-height: 1.1;
-            
-            @include breakpoint($breakpoint-md) {
-                font-size: $font-size-4xl;
-                margin-bottom: $space-md;
-            }
-            
-            @include breakpoint($breakpoint-sm) {
-                font-size: $font-size-3xl;
-                margin-bottom: $space-sm;
-            }
-        }
-        
-        p {
-            font-size: $font-size-lg;
-            margin-bottom: $space-xl;
-            color: rgba($white, 0.95);
-            
-            @include breakpoint($breakpoint-sm) {
-                font-size: $font-size-base;
-                margin-bottom: $space-lg;
-            }
-        }
+    @include breakpoint($breakpoint-md) {
+        font-size: $font-size-2xl;
+        margin-bottom: $space-lg;
     }
     
-    .hero-buttons {
-        @include flex-center;
-        gap: $space-lg;
-        flex-wrap: wrap;
-        position: relative;
-        z-index: 1;
+    @include breakpoint($breakpoint-sm) {
+        font-size: $font-size-xl;
+        margin-bottom: $space-md;
+        letter-spacing: -0.3px;
+    }
+}
+
+.hero-subtitle {
+    font-size: $font-size-lg;
+    line-height: 1.6;
+    color: rgba($white, 0.9);
+    margin-bottom: $space-2xl;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+    
+    @include breakpoint($breakpoint-md) {
+        font-size: $font-size-base;
+        margin-bottom: $space-xl;
+    }
+    
+    @include breakpoint($breakpoint-sm) {
+        font-size: $font-size-sm;
+        margin-bottom: $space-lg;
+        line-height: 1.5;
+    }
+}
+
+.hero-buttons {
+    @include flex-center;
+    gap: $space-lg;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+    
+    @include breakpoint($breakpoint-md) {
+        flex-direction: column;
+        width: 100%;
+        gap: $space-md;
+    }
+    
+    @include breakpoint($breakpoint-sm) {
+        gap: $space-sm;
+    }
+    
+    .btn {
+        padding: $space-md $space-2xl;
+        font-size: $font-size-base;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: $space-md;
+        text-decoration: none;
+        white-space: nowrap;
+        
+        @include breakpoint($breakpoint-md) {
+            width: 100%;
+            justify-content: center;
+            padding: $space-md $space-lg;
+        }
         
         @include breakpoint($breakpoint-sm) {
-            gap: $space-md;
+            width: 100%;
+            justify-content: center;
+            padding: $space-sm $space-lg;
+            font-size: $font-size-sm;
+            gap: $space-sm;
         }
         
-        .btn-primary-white {
-            @include btn-primary;
-            background-color: $white;
-            color: $primary-color;
+        svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
             
-            &:hover {
-                background-color: color.adjust($white, $lightness: -3%);
-                color: color.adjust($primary-color, $lightness: -8%);
+            @include breakpoint($breakpoint-sm) {
+                width: 16px;
+                height: 16px;
             }
         }
         
-        .btn-secondary-white {
-            @include btn-secondary;
-            background-color: transparent;
-            color: $white;
-            border-color: $white;
-            
-            &:hover {
-                background-color: $white;
-                color: $primary-color;
-            }
+        &:hover svg {
+            transform: translateX(4px);
         }
+    }
+    
+    .btn-primary {
+        background: linear-gradient(135deg, $primary-color 0%, color.adjust($primary-color, $lightness: -10%) 100%);
+        color: $white;
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        
+        &:hover {
+            background: linear-gradient(135deg, color.adjust($primary-color, $lightness: 5%) 0%, color.adjust($primary-color, $lightness: -15%) 100%);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.35);
+            transform: translateY(-2px);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+    }
+    
+    .btn-secondary {
+        background: rgba($white, 0.1);
+        color: $white;
+        border: 2px solid rgba($white, 0.3);
+        
+        &:hover {
+            background: rgba($white, 0.15);
+            border-color: rgba($white, 0.6);
+            box-shadow: 0 10px 25px rgba($white, 0.1);
+        }
+    }
+}
+
+.hero-visual {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    
+    @include breakpoint($breakpoint-lg) {
+        height: 350px;
+    }
+    
+    @include breakpoint($breakpoint-md) {
+        flex: 0;
+        height: 0;
+        width: 0;
+        display: none;
+    }
+    
+    @include breakpoint($breakpoint-sm) {
+        display: none;
+    }
+}
+
+.floating-card {
+    position: absolute;
+    background: rgba($white, 0.08);
+    border: 1px solid rgba($white, 0.15);
+    border-radius: 16px;
+    padding: $space-lg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-md;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: rgba($white, 0.12);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+    }
+    
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(212, 175, 55, 0.15);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $primary-color;
+        
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    
+    p {
+        font-size: $font-size-sm;
+        color: rgba($white, 0.8);
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.card-1 {
+    top: 20px;
+    left: 0;
+    animation: float 6s ease-in-out infinite;
+}
+
+.card-2 {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    animation: float 7s ease-in-out infinite 0.2s;
+}
+
+.card-3 {
+    bottom: 20px;
+    left: 15%;
+    animation: float 8s ease-in-out infinite 0.4s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -117,5 +356,23 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
     }
 }

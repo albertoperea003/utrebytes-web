@@ -5,10 +5,15 @@
 @section('content')
 <div class="characteristics-container">
     <!-- Header -->
-    <section class="characteristics-header" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('{{ asset('images/heros/hero_servicios.jpg') }}');">
-        <div class="container">
-            <h1>Nuestros principales servicios</h1>
-            <p>Descubre todas las soluciones y servicios que hacen de UtreBytes tu socio tecnológico ideal</p>
+    <section class="hero" style="background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(15, 35, 55, 0.75) 50%, rgba(212, 175, 55, 0.15) 100%), url('{{ asset('images/heros/hero_servicios.jpg') }}');">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">Nuestros Servicios</span>
+                </div>
+                <h1 class="hero-title">Nuestros principales servicios</h1>
+                <p class="hero-subtitle">Descubre todas las soluciones y servicios que hacen de UtreBytes tu socio tecnológico ideal</p>
+            </div>
         </div>
     </section>
 
@@ -206,15 +211,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="characteristics-cta" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('{{ asset('images/heros/hero_servicios.jpg') }}');">
-        <div class="container">
-            <h2>¿No lo tienes claro?</h2>
-            <p>Contátanos y descubre qué necesitas</p>
-            <a href="{{ route('contacto') }}" class="cta-button">Solicita una Consulta Gratuita</a>
         </div>
     </section>
 </div>

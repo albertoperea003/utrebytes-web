@@ -5,10 +5,15 @@
 @section('content')
 <div class="partners-container">
     <!-- Header -->
-    <section class="partners-header" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('{{ asset('images/heros/hero_partners.jpg') }}');">
-        <div class="container">
-            <h1>GRUPO LRP 24 HOLDING S.L.</h1>
-            <p>Descubre las empresas que forman parte de nuestro ecosistema empresarial</p>
+    <section class="hero" style="background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(15, 35, 55, 0.75) 50%, rgba(212, 175, 55, 0.15) 100%), url('{{ asset('images/heros/hero_partners.jpg') }}');">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">Nuestro Ecosistema</span>
+                </div>
+                <h1 class="hero-title">GRUPO LRP 24 HOLDING S.L.</h1>
+                <p class="hero-subtitle">Descubre las empresas que forman parte de nuestro ecosistema empresarial</p>
+            </div>
         </div>
     </section>
 
@@ -187,15 +192,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="partners-cta" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('{{ asset('images/heros/hero_partners.jpg') }}');">
-        <div class="container">
-            <h2>Trabajamos juntos para tu éxito</h2>
-            <p>Descubre cómo nuestro ecosistema de empresas puede ayudarte a crecer</p>
-            <a href="{{ route('contacto') }}" class="cta-button">Contacta con nosotros</a>
         </div>
     </section>
 </div>

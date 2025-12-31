@@ -4,16 +4,55 @@
 
 @section('content')
         <!-- Hero Section -->
-        <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ asset('images/heros/hero_background.jpg') }}');">
-            <div class="hero-content">
-                <h1>Bienvenido a UtreBytes</h1>
-                <p>Unidad tecnológica GRUPO LRP 24 HOLDING S.L. 
-                <br> 
-                Tecnología de vanguardia al servicio de tus necesidades.   
-                </p>
-                <div class="hero-buttons">
-                    <a href="{{ route('caracteristicas') }}" class="btn-primary-white">Consultar servicios</a>
-                    <a href="{{ route('utrebytes') }}" class="btn-secondary-white">Conoce Más</a>
+        <section class="hero" style="background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(15, 35, 55, 0.75) 50%, rgba(212, 175, 55, 0.15) 100%), url('{{ asset('images/heros/hero_background.jpg') }}');">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text">Transformación Digital</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Tecnología de vanguardia para tu negocio
+                    </h1>
+                    <p class="hero-subtitle">
+                        UtreBytes, la unidad tecnológica de <strong>GRUPO LRP 24 HOLDING S.L.</strong>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="{{ route('caracteristicas') }}" class="btn btn-primary">
+                            <span>Explorar Servicios</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="{{ route('utrebytes') }}" class="btn btn-secondary">Conoce Nuestra Historia</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                            </svg>
+                        </div>
+                        <p>Ciberseguridad</p>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20m10-10H2"></path>
+                                <circle cx="12" cy="12" r="10"></circle>
+                            </svg>
+                        </div>
+                        <p>Inteligencia Artificial</p>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <p>Software a Medida</p>
+                    </div>
                 </div>
             </div>
         </section>

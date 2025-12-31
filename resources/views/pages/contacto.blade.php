@@ -4,10 +4,15 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="contact-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ asset('images/heros/hero_background.jpg') }}');">
-    <div class="container">
-        <h1>Contáctanos</h1>
-        <p>Estamos aquí para ayudarte a transformar tu negocio. Ponte en contacto con nuestro equipo</p>
+<section class="hero" style="background-image: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(15, 35, 55, 0.75) 50%, rgba(212, 175, 55, 0.15) 100%), url('{{ asset('images/heros/hero_background.jpg') }}');">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-text">Contacto</span>
+            </div>
+            <h1 class="hero-title">Contáctanos</h1>
+            <p class="hero-subtitle">Estamos aquí para ayudarte a transformar tu negocio. Ponte en contacto con nuestro equipo</p>
+        </div>
     </div>
 </section>
 
