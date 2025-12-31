@@ -19,7 +19,7 @@
             </a>
 
             <button class="navbar__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbarMenu">
-                <span aria-hidden="true"></span>
+                <i class="fas fa-bars"></i>
             </button>
 
             <ul class="navbar__menu" id="navbarMenu">

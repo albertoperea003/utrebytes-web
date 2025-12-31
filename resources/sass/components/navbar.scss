@@ -137,52 +137,31 @@
 
 	&__toggle {
 		@include btn-reset;
-		display: none;
 		width: 44px;
 		height: 44px;
 		border-radius: $radius-lg;
 		border: 1px solid color.scale($border-color, $lightness: 20%);
 		position: relative;
 		transition: background $transition-fast;
+		font-size: 1.25rem;
+		color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-		span,
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			width: 20px;
-			height: 2px;
-			background: $white;
-			left: 50%;
-			transform: translateX(-50%);
-			transition: transform $transition-normal, opacity $transition-normal;
+		i {
+			transition: transform $transition-normal;
 		}
 
-		span {
-			top: 50%;
-		}
-
-		&::before {
-			top: 14px;
-		}
-
-		&::after {
-			bottom: 14px;
+		@media (min-width: 1025px) {
+			display: none;
 		}
 	}
 
 	&.is-open {
 		.navbar__toggle {
-			span {
-				opacity: 0;
-			}
-
-			&::before {
-				transform: translate(-50%, 6px) rotate(45deg);
-			}
-
-			&::after {
-				transform: translate(-50%, -6px) rotate(-45deg);
+			i {
+				transform: rotate(90deg);
 			}
 		}
 
@@ -349,10 +328,21 @@
 		&__inner {
 			flex-wrap: wrap;
 			padding: 0 $space-lg;
+			position: relative;
+		}
+
+		&__brand {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: $space-md;
+			z-index: 1001;
 		}
 
 		&__toggle {
 			display: block;
+			order: 2;
+			margin-left: auto;
 		}
 
 		&__menu {
@@ -369,6 +359,7 @@
 			max-height: 0;
 			overflow: hidden;
 			transition: transform $transition-normal, opacity $transition-normal, max-height $transition-normal, padding $transition-fast, margin $transition-fast;
+			order: 3;
 		}
 
 		&__dropdown {
